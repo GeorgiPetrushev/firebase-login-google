@@ -1,8 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { auth } from "../utils/firebaseConf";
+import { auth } from "../../utils/firebaseConf";
 
 const Login = () => {
   const googleProvider = new GoogleAuthProvider();
@@ -23,7 +22,7 @@ const Login = () => {
       <div>Test Login</div>
       <div>Sing in with one of the options</div>
       <button onClick={GoogleLogin}>Sing in with your Google account</button>
-      <button>Sing in with your FaceBook account</button>
+      <Link to="">Register</Link>
     </div>
   );
 };

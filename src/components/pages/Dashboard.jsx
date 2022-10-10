@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../utils/firebaseConf";
+import { auth } from "../../utils/firebaseConf";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const Dashboard = () => {
@@ -13,6 +13,12 @@ const Dashboard = () => {
   if (loading) {
     return <h1>loading ...</h1>;
   }
+
+  if (!user){
+    return navigate("/login");
+  }
+  
+
   if(user)
   return (
     <div>
