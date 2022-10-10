@@ -21,7 +21,7 @@ const Nav = () => {
         {user && (
           <div>
             <Link to="/dashboard">
-              {/* <img src={user.photoURL} alt=""></img> */}
+              <img src={user.photoURL} alt=""></img>
               <h1>hi</h1>
             </Link>
           </div>
