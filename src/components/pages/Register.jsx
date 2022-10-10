@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <div>Register</div>
-  )
-}
+    <div>
+      <h1>Register</h1>
+      <input placeholder="User"></input>
+      <input placeholder="password"></input>
+      <button>Register</button>
+      <Link to="/">Go back</Link>
+    </div>
+  );
+};
 
-export default Register
+export default Register;

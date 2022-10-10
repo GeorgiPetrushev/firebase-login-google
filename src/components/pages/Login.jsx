@@ -21,8 +21,13 @@ const Login = () => {
     <div>
       <div>Test Login</div>
       <div>Sing in with one of the options</div>
+      <input placeholder="User"></input>
+      <input placeholder="password"></input>
+      <button>Login</button><br/>
+      <div>or</div>
       <button onClick={GoogleLogin}>Sing in with your Google account</button>
-      <Link to="">Register</Link>
+      <br />
+      <Link to="/login/register">Register</Link>
     </div>
   );
 };
