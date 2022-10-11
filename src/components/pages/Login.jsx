@@ -51,6 +51,7 @@ const Login = () => {
           value={loginEmail}
         ></input>
         <input
+          type="password"
           placeholder="password"
           onChange={(e) => setLoginPassword(e.target.value)}
           value={loginPasswords}
@@ -62,9 +63,8 @@ const Login = () => {
       </div>
       <div>or</div>
       <div className="google-btn-container">
-       
-          <FcGoogle />
-      <button onClick={GoogleLogin} className="google-btn">
+        <FcGoogle />
+        <button onClick={GoogleLogin} className="google-btn">
           Sing in with your Google account
         </button>
       </div>

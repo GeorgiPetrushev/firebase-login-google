@@ -10,7 +10,7 @@ const LoginStyle = styled.div`
   input {
     margin-right: 1rem;
     height: 1.5rem;
-    padding-left: 0.2rem;
+    padding-left: 0.3rem;
   }
   .login-btn {
     height: 1.8rem;
