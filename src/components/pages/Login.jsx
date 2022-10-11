@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithPopup, GoogleAuthProvider,signInWithEmailAndPassword } from "firebase/auth";
+import {
+  signInWithPopup,
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { auth } from "../../utils/firebaseConf";
+import LoginStyle from "../../style/LoginStyle";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const googleProvider = new GoogleAuthProvider();
@@ -19,31 +25,57 @@ const Login = () => {
     }
   };
 
-  const loginEmailPass = async () =>{
+  const loginEmailPass = async () => {
     try {
-      const user = await signInWithEmailAndPassword(auth,loginEmail,loginPasswords);
+      const user = await signInWithEmailAndPassword(
+        auth,
+        loginEmail,
+        loginPasswords
+      );
       console.log(user);
       navigate("/dashboard");
     } catch (error) {
-      console.log(error.message,error.code);
+      console.log(error.message, error.code);
     }
-  }
+  };
 
   return (
-    <div>
-      <div>Test Login</div>
+    <LoginStyle>
+      <div>Login</div>
+      <br />
       <div>Sing in with one of the options</div>
       <div className="login-pass">
-      <input placeholder="User" onChange={(e)=> setLoginEmail(e.target.value)} value={loginEmail}></input>
-      <input placeholder="password" onChange={(e)=> setLoginPassword(e.target.value)} value={loginPasswords}></input>
-        <button onClick={loginEmailPass}>Login</button>
+        <input
+          placeholder="User"
+          onChange={(e) => setLoginEmail(e.target.value)}
+          value={loginEmail}
+        ></input>
+        <input
+          placeholder="password"
+          onChange={(e) => setLoginPassword(e.target.value)}
+          value={loginPasswords}
+        ></input>
+        <button onClick={loginEmailPass} className="login-btn">
+          Login
+        </button>
         <br />
       </div>
       <div>or</div>
-      <button onClick={GoogleLogin}>Sing in with your Google account</button>
+      <div className="google-btn-container">
+       
+          <FcGoogle />
+      <button onClick={GoogleLogin} className="google-btn">
+          Sing in with your Google account
+        </button>
+      </div>
       <br />
-      <Link to="/login/register">Register</Link>
-    </div>
+      <br />
+
+      <div>
+        If you don`t have account <Link to="/login/register"> Register </Link>{" "}
+        to create it.
+      </div>
+    </LoginStyle>
   );
 };
 
