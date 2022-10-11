@@ -25,7 +25,7 @@ const Dashboard = () => {
       <div>Welcome: {user.displayName}</div>
 
       <button
-        onClick={() => {
+        onClick={async() => {
           navigate("/login");
           auth.signOut();
         }}
