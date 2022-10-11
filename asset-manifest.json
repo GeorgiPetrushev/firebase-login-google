@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/firebase-login-google/static/css/main.d2ab4aa5.css",
+    "main.js": "/firebase-login-google/static/js/main.e7389e5d.js",
+    "index.html": "/firebase-login-google/index.html",
+    "main.d2ab4aa5.css.map": "/firebase-login-google/static/css/main.d2ab4aa5.css.map",
+    "main.e7389e5d.js.map": "/firebase-login-google/static/js/main.e7389e5d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2ab4aa5.css",
+    "static/js/main.e7389e5d.js"
+  ]
+}
