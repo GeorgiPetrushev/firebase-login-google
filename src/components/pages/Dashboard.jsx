@@ -14,7 +14,7 @@ const Dashboard = () => {
   }
 
   if (!user) {
-    return navigate("/login");
+    return navigate("/firebase-login-google/login");
   }
 
   if (user)
@@ -25,7 +25,7 @@ const Dashboard = () => {
         <button
           className="sing-out-btn"
           onClick={async () => {
-            navigate("/login");
+            navigate("/firebase-login-google/login");
             auth.signOut();
           }}
         >

@@ -12,10 +12,10 @@ const App = () => {
       <Router>
         <Nav />
         <Routes>
-          <Route exact path="/" element={<About />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/login/register" element={<Register />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route exact path="/firebase-login-google" element={<About />} />
+          <Route exact path="/firebase-login-google/login" element={<Login />} />
+          <Route exact path="/firebase-login-google/login/register" element={<Register />} />
+          <Route exact path="/firebase-login-google/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </AppStyle>

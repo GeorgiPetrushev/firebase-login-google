@@ -12,16 +12,16 @@ const Nav = () => {
   return (
     <NavStyle>
       <div>
-        <Link to="/" className="home-icon"> <AiOutlineHome/><div className="home">Home</div></Link>
+        <Link to="/firebase-login-google" className="home-icon"> <AiOutlineHome/><div className="home">Home</div></Link>
       </div>
       {!user && (
         <div>
-          <Link to="/login">Login</Link>
+          <Link to="/firebase-login-google/login">Login</Link>
         </div>
       )}
       {user && (
         <div>
-          <Link to="/dashboard">
+          <Link to="/firebase-login-google/dashboard">
             <img src={user.photoURL} alt="Missing info"></img>
           </Link>
         </div>

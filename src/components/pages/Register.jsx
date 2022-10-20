@@ -18,7 +18,7 @@ const Register = () => {
         registerPasswords
       );
       console.log(user);
-      navigate("../dashboard");
+      navigate("../firebase-login-google/dashboard");
     } catch (error) {
       console.log(error.message);
     }
@@ -43,7 +43,7 @@ const Register = () => {
       </button>
       <br />
       <br />
-      <Link to="/login">Go back</Link>
+      <Link to="/firebase-login-google/login">Go back</Link>
     </RegisterStyle>
   );
 };

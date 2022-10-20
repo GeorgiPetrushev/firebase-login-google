@@ -19,7 +19,7 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       console.log(result.user.displayName);
-      navigate("/dashboard");
+      navigate("/firebase-login-google/dashboard");
     } catch (error) {
       console.log(error.massage);
     }
@@ -33,7 +33,7 @@ const Login = () => {
         loginPasswords
       );
       console.log(user);
-      navigate("/dashboard");
+      navigate("/firebase-login-google/dashboard");
     } catch (error) {
       console.log(error.message, error.code);
     }
@@ -72,8 +72,7 @@ const Login = () => {
       <br />
 
       <div>
-        If you don`t have account <Link to="/login/register"> Register </Link>{" "}
-        to create it.
+        If you don`t have account <Link to="/firebase-login-google/login/register"> Click Here </Link> to register.
       </div>
     </LoginStyle>
   );
